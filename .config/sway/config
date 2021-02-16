@@ -63,10 +63,11 @@ set $menu wofi --show run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/sway/)
-output * bg /home/obayemi/Images/wallpapers/enabled/d8d49e1efe004f560ab91b82c3e6cf4a.jpg fill
+# output * bg /home/obayemi/Images/wallpapers/enabled/d8d49e1efe004f560ab91b82c3e6cf4a.jpg fill
 #
 # Example configuration:
 #
+exec --no-startup-id /home/obayemi/.local/bin/wallp
 output 'Unknown AG241QG4 0x00000151' {
     #scale 0.5
     position 1920,0

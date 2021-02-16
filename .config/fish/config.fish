@@ -6,7 +6,7 @@ set -x NODE_PATH "$HOME/.node/lib/node_modules:$NODE_PATH"
 # set -x PATH $HOME/.node/bin:$PATH
 # set -x PATH $GOPATH/bin:$PATH
 # set -x PATH $HOME/.gem/ruby/2.4.0/bin/:$PATH
-set -x PATH $HOME/.nix-profile/bin:$PATH
+set -x PATH $HOME/.nix-profile/bin:$HOME/dev/flutter/bin:$PATH
 
 
 # eval (python -m virtualfish)

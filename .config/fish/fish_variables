@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export COMPOSE_DOCKER_CLI_BUILD:1
+SETUVAR --export DOCKER_BUILDKIT:1
 SETUVAR --export EDITOR:vim
 SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2d\x2dtype\x20f
 SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25

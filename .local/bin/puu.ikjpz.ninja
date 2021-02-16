@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function fail {
+    echo fail
+    exit 1
+}
+
+function main {
+    local filename=`mktemp -ut XXXXX.png`
+    if [[ -n $WAYLAND_DISPLAY ]]; then
+        grim -g "$(slurp)" $filename || fail
+    fi
+    wl-copy < $filename
+    notify-send 'screenshot copied to clipboard' $filename
+}
+main
