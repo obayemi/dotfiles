@@ -1,0 +1,16 @@
+profile work {
+  output eDP-1 scale 1.4 position 0,0 mode 2256x1504
+  output 'Dell Inc. DELL U2518D 3C4YP95TBJ5L' position 1613,0 mode 2560x1440
+  output 'Dell Inc. DELL U2518D 3C4YP95TBQ5L' position 4173,0 mode 2560x1440
+}
+
+profile {
+  output eDP-1 scale 1.2 position 0,0 mode 2256x1504
+}
+
+profile home {
+  output 'LG Electronics LG ULTRAGEAR 102NTGY09599' position 0,0 mode 2560x1440
+  output 'LG Electronics LG ULTRAGEAR 104NTNH6V047' position 2560,0 mode 2560x1440
+  output 'AOC AG241QG4 0x00000151' position 5120,0 mode 2560x1440
+  output eDP-1 scale 1.2 position 2949,1440 mode 2256x1504
+}
