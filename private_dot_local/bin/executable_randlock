@@ -1,0 +1,17 @@
+#!/bin/fish
+
+function list_wallpapers
+    set -q WALLPAPERS || set -l WALLPAPERS $HOME/Images/wallpapers/enabled/*
+    shuf -e $WALLPAPERS
+end
+
+begin
+    set -l wallpapers (list_wallpapers)
+    set -l args 
+
+    for output in (swaymsg -t get_outputs --raw | jq -r '.[] | select(.active) | .name')
+        set -a args "--image=$output:$wallpapers[1]"
+        set -e wallpapers[1]
+    end 
+    swaylock $args
+end

@@ -1,0 +1,25 @@
+#!/bin/env zsh
+
+if [[ -z $SWAYSOCK ]]; then
+    export SWAYSOCK=$(ls /run/user/*/sway-ipc.*.sock | head -n 1)
+fi
+
+list_wallpapers() {
+    shuf -e ${WALLPAPERS:-$HOME/Images/wallpapers/enabled/*}
+}
+main() {
+    local wallpapers=(${(@f)$(list_wallpapers)})
+    for output in $(swaymsg -t get_outputs --raw | jq '.[] | select(.active) | .name'); do
+
+        local wallpaper=$wallpapers[1]
+        wallpapers=(${wallpapers:1})
+        echo swaymsg "output $output bg '$wallpaper' fill"
+        swaymsg "output $output bg '$wallpaper' fill"
+    done
+}
+
+if [[ -n $WAYLAND_DISPLAY ]]; then
+    main
+else
+    $HOME/.fehbg
+fi
