@@ -10,6 +10,9 @@ abbr -a ddsh 'docc exec web'
 
 
 abbr -a g git
+abbr -a j jj
+abbr -a js jj status
+abbr -a jd jj diff
 abbr -a l ls -l
 abbr -a ll ls -la
 abbr -a tree ls --tree
