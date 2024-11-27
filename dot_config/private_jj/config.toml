@@ -1,0 +1,16 @@
+[user]
+name = "obayemi"
+email = "obayemi@ikjpz.com"
+
+[ui]
+default-command = "log"
+diff.tool = ["delta", "$left", "$right"]
+editor = "nvim"
+
+
+[aliases]
+d = ['diff']
+c = ['commit']
+
+[git]
+auto-local-bookmark = true
